@@ -1,0 +1,20 @@
+    1  cd /opt/
+    2  curl -O https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.7.9-1.el7.ans.noarch.rpm
+    3  ls -lh
+    4  yum repolist
+    5  yum-config-manager --enable rhui-REGION-rhel-server-extras >/dev/null
+    6  yum repolist
+    7  yum install ansible-2.7.9-1.el7.ans.noarch.rpm
+    8  ansible --version
+    9  which pthon
+   10  which python
+   11  vi /etc/ansible/ansible.cfg
+   12  cd /opt/
+   13  ls
+   14  touch inventory.txt
+   15  ls -l
+   16  vi inventory.txt
+   17  ssh-keygen
+   18  ssh-copy-id root@ec2-3-85-221-45.compute-1.amazonaws.com
+   19  ansible webservers -m ping
+   20  history

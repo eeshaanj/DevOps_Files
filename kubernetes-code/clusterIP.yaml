@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      # port is the actual port on which the clusterIP will accept traffic from others
+      port: 80
+      # targetPort is the actual port on which your application running inside POD will accept traffic
+      targetPort: 80

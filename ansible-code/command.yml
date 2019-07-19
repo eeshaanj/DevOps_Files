@@ -1,0 +1,27 @@
+---
+# This is my first playbook
+
+# HEADER SECTION
+ - name: This playbook will create a file
+   hosts: webservers
+
+# TASK SECTION
+   tasks:
+
+     - name: To create a folder using command module
+       command: cat /opt/inventory.txt
+       register: inv_out
+
+     - name: to print a value
+       debug:
+         var: inv_out
+
+     - name: to print a value
+       debug:
+         var: inv_out.rc
+
+     - name: create a file if the above command rn succesfully
+       file:
+         path: /opt/goutham/apache.log
+         state: touch
+       when: inv_out.changed == true

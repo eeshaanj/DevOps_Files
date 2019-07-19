@@ -1,0 +1,92 @@
+mkdir roles
+ls
+cd roles/
+ansible-galaxy init apache
+yum install -y tree >/dev/null
+tree
+ls
+cd apache/
+ls -l
+cd meta/
+ls
+vi main.yml
+cd ..
+ls -l
+cd defaults/
+ls
+vi main.yml
+cd ../
+cd vars/
+vi main.yml
+ls -ltr
+cd ..
+ls -ltr
+cd tasks/
+ls
+touch install.yml service.yml configure.yml pre-req.yml
+ls -l
+vi main.yml
+vi pre-req.yml
+vi install.yml
+vi service.yml
+vi configure.yml
+cd ..
+ls -l
+cd files/
+ls
+vi index.html
+cd ..
+ls -l
+cd tasks/
+vi configure.yml
+cd ..
+ls -l
+cd handlers/
+ls
+vi main.yml
+cat ../tasks/configure.yml
+cat main.yml
+cd ..
+ls
+cd templates/
+ls
+touch config.xml.j2
+ls -l
+vi config.xml.j2
+vi /tmp/facts.txt
+vi config.xml.j2
+cd ../tasks/
+ls
+vi configure.yml
+cd ..
+ls
+cd ..
+ls
+touch abc_apache.yml xyz_apache.yml
+ls -l
+vi abc_apache.yml
+vi /etc/ansible/ansible.cfg
+pwd
+ansible-playbook abc_apache.yml --syntax-check
+ansible all -m ping
+ansible-playbook abc_apache.yml
+vi apache/tasks/pre-req.yml
+vi apache/vars/main.yml
+vi apache/tasks/pre-req.yml
+vi apache/tasks/main.yml
+ansible-playbook abc_apache.yml
+vi apache/tasks/pre-req.yml
+vi apache/tasks/pre-req.yml -vvv
+ansible-playbook abc_apache.yml -vvv
+vi apache/tasks/pre-req.yml
+vi apache/tasks/main.yml
+ansible-playbook abc_apache.yml -vvv
+ansible-playbook abc_apache.yml
+vi apache/tasks/main.yml
+ansible-playbook abc_apache.yml
+vi apache/vars/main.yml
+ansible-playbook abc_apache.yml
+vi abc_apache.
+vi abc_apache.yml
+ansible-playbook abc_apache.yml
+history

@@ -1,0 +1,273 @@
+sudo su -
+clear
+kubectl get nodes
+ls
+l
+mkdir kubernetes
+ls
+cd kubernetes/
+ls
+vi namespace.yml
+kubectl
+kubectl api-resources
+kubectl api-resources | wc -l
+kubectl api-resources -o json
+kubectl api-resources -o wide
+ls
+vi namespace.yaml
+kubectl apply -f namespace.yaml
+kubectl get ns
+kubectl describe namespace developement
+kubectl describe namespace development
+kubectl config current-contexts
+kubectl config get-contexts
+kubectl set-context default --namespace=default --cluster=kubernetes --user=kubernetes-admin
+kubectl config get-contexts
+kubectl config set-context default --namespace=default --cluster=kubernetes --user=kubernetes-admin
+kubectl config get-contexts
+kubectl config set-context development --namespace=development --cluster=kubernetes --user=kubernetes-admin
+kubectl config get-contexts
+kubectl config use-context development
+kubectl config get-contexts
+kubectl get pods
+kubectl get pods --namespace default
+kubectl get pods --namespace kube-system
+ls
+vi ResourceQuota.yaml
+kubectl api-versions
+kubectl api-versions
+vi ResourceQuota.yaml
+kubectl describe namespace development
+kubectl apply -f ResourceQuota.yaml
+vi ResourceQuota.yaml
+kubectl apply -f ResourceQuota.yaml
+vi ResourceQuota.yaml
+kubectl apply -f ResourceQuota.yaml
+vi ResourceQuota.yaml
+kubectl describe namespace development
+kubectl apply -f ResourceQuota.yaml
+kubectl describe namespace development
+ls
+vi pod.yaml
+kubectl get pods
+kubectl apply -f pod.yaml
+vi pod.yaml
+kubectl apply -f pod.yaml
+kubectl get pods
+vi pod.yaml
+kubectl diff pod.yaml
+kubectl diff -f pod.yaml
+kubectl apply -f pod.yaml
+kubectl delete -f pod.yaml
+kubectl apply -f pod.yaml
+kubectl get pods
+vi pod.yaml
+kubectl get pods
+kubectl describe pods sample-pod
+vi pod.yaml
+kubectl delete -f pod.yaml
+kubectl apply -f pod.yaml
+kubectl get pods
+exit
+clear
+kubectl get pods
+kubectl get pods -o wide
+kubectl
+kubectl top
+kubectl exec -it sample-pod
+kubectl exec -it sample-pod /bin/bash
+vi pod.yaml
+cd kubernetes/
+vi pod.yaml
+kubectl exec -it sample-pod --container sample-container /bin/bash
+vi pod.yaml
+kubectl watch rollout deployment.kubernetes.io/nginx-deployment
+kubectl rollout status deployment.kubernetes.io/nginx-deployment
+kubectl rollout status deployment.v1.apps/nginx-deployment
+exit
+clear
+kubectl get nodes
+ls
+yum install -ygit >/dev/null
+yum install -y git >/dev/null
+apt-get install -y git >/dev/null
+sudo apt-get install -y git >/dev/null
+git --version
+git clone https://github.com/gouthamchilakala/kubernetes-demo.git
+ls
+cd kubernetes-demo/
+l
+ls
+vi replicaSet.yaml
+cd ../
+ls
+cd kubernetes
+kubectl delete -f ResourceQuota.yaml
+kubectl config get-contexts
+kubectl describe ns development
+cd ../kubernetes-demo/
+ls
+kubectl get pods
+kubectl delete pod sample-pod
+kubectl get pods
+kubectl delete -f pod.yaml
+kubectl get pods
+kubectl apply -f replicaSet.yaml
+kubectl get replicaset
+kubectl get pods
+kubectl delete pod my-replica-9fqvw
+kubectl get pods
+vi replicaSet.yaml
+wget https://k8s.io/examples/pods/probe/tcp-liveness-readiness.yaml
+ls
+vi tcp-liveness-readiness.yaml
+vi replicaSet.yaml
+kubectl apply -f replicaSet.yaml
+vi replicaSet.yaml
+kubectl apply -f replicaSet.yaml
+vi replicaSet.yaml
+kubectl apply -f replicaSet.yaml
+kubectl get pods
+vi replicaSet.yaml
+kubectl get pods
+vi replicaSet.yaml
+kubectl apply -f replicaSet.yaml
+kubectl get pods
+vi replicaSet.yaml
+kubectl apply -f replicaSet.yaml
+kubectl -f delete replicaSet.yaml
+kubectl delete -f replicaSet.yaml
+kubectl get rs
+kubectl get po
+vi deployment.yaml
+kubectl apply -f deployment.yaml
+kubectl get deployment
+kubectl get replicaset
+kubectl get pods
+vi deployment.yaml
+kubectl describe deployment nginx-deployment
+kubectl get pods -o wide
+kubectl get pods -o yaml
+kubectl describe deployment nginx-deployment
+vi deployment.yaml
+kubectl apply -f deployment.yaml
+vi deployment.yaml
+kubectl describe deployment nginx-deployment
+kubectl get replicaset
+vi deployment.yaml
+kubectl apply -f deployment.yaml
+kubectl get replicaset
+ls
+ls -a
+rm -rf .git
+ls
+git init
+git add --all
+git commit -m "Inital commit"
+git remote add local https://github.com/gkdevops/kubernetes-code.git
+git push -u local master
+kubectl get nodes
+kls
+ls
+cd kubernetes-demo/
+ls
+ls -l
+vi clusterIP.yaml
+vi deployment.yaml
+vi clusterIP.yaml
+kubectl get pods
+kubectl apply -f clusterIP.yaml
+kubectl get services
+vi clusterIP.yaml
+kubectl describe service my-service
+kubectl run my-test -i --tty --image ubuntu -- bash
+vi nodePort.yaml
+kubectl delete -f clusterIP.yaml
+kubectl apply -f nodePort.yaml
+kubectl get services
+kubectl describe service my-service
+kubectl
+ls
+wget kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-ngi
+loy/mandatory.yaml
+wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/
+l
+ls
+vi mandatory.yaml
+vi configMap.yaml
+ls
+vi deployment-cm.yaml
+ls
+vi configMap.yaml
+vi deployment-cm.yaml
+vi deployment-file.yaml
+vi configMap.yaml
+kubectl apply -f configMap.yaml
+kubectl get configmap
+kubectl describe configmap cm-demo
+vi deployment-cm.yaml
+cp deployment-cm.yaml deployment-cm2.yml
+vi deployment-cm2.yml
+kubectl delete -f deployment.yaml
+kubectl delete -f nodePort.yaml
+kubectl get all
+kubectl delete pod pod/my-test-cb76b874b-drcxx
+kubectl delete pod my-test-cb76b874b-drcxx
+kubectl get all
+kubectl get configmap
+clear
+kubectl get configmap
+rm deployment-cm2.yml
+vi deployment-cm.yaml
+kubectl apply-f deployment-cm.yaml
+kubectl apply -f deployment-cm.yaml
+kubectl get pods
+kubectl exec -it nginx-deployment-75d778cdd-k6jgc /bin/bash
+ls
+cd files/
+ls
+vi config.xml
+cd ..
+kubectl create configmap my-configxml --from-file=files
+kubectl get configmap
+kubectl get configmap my-configxml -o wide
+kubectl describe configmap my-configxml -o yaml
+kubectl describe configmap my-configxml
+kubectl describe configmap my-configxml -o json
+kubectl get configmap my-configxml -o json
+kubectl get configmap my-configxml -o yaml
+ls
+vi configMap-file.yaml
+kubectl delete -f my-configxml
+kubectl delete configmap my-configxml
+kubectl get configmap
+mv configMap.yaml configMap-env.yaml
+clear
+ls
+mv deployment-cm.yaml deployment-env.yaml
+kubectl delete -f deployment-env.yaml
+kubectl apply -f configMap-file.yaml
+kubectl describe configmap my-configxml
+vi deployment-file.yaml
+vi configMap-file.yaml
+vi deployment-file.yaml
+kubectl apply -f deployment-file.yaml
+vi deployment-file.yaml
+kubectl apply -f deployment-file.yaml
+kubectl get pods
+kubectl exec -it nginx-deployment-6d76447446-6b8sb /bin/bash
+kubectl delete -f deployment-file.yaml
+ls
+vi secret.yaml
+echo "ravi" | base64
+kubectl apply -f secret.yaml
+kubectl describe secret my-secret
+vi deployment-secret.yaml
+kubectl apply -f deployment-secret.yaml
+kubectl get pods
+kubectl exec -it nginx-deployment-6db4f858d5-4sm2v /bin/bash
+kubectl delete -f deployment-secret.yaml
+kubectl get all
+kubectl delete deployment.apps/my-test
+kubectl get all
+kubectl get configmap
